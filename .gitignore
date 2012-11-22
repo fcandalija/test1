@@ -1,0 +1,15 @@
+# maven target directory
+target/
+
+# eclipse files and directories
+.project
+.classpath
+.settings
+
+# idea files and directories
+.idea/
+*.iml
+*.ipr
+*.iws
+
+*.*~
