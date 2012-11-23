@@ -21,11 +21,11 @@ public class TimeMachineTest {
         
         final Date past = DateUtils.parseDate("2000-05-15", DATE_PATTERNS);
         final Date present = new Date();
-        final Date futur = DateUtils.parseDate("2050-02-13", DATE_PATTERNS);
+        final Date future = DateUtils.parseDate("2013-02-13", DATE_PATTERNS);
         
         Assert.assertTrue(timeMachine.isPast(past));
         Assert.assertFalse(timeMachine.isPast(present));
-        Assert.assertFalse(timeMachine.isPast(futur));
+        Assert.assertFalse(timeMachine.isPast(future));
     }
     
 
