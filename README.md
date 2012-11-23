@@ -5,7 +5,7 @@ This is a test project to interview candidat about their skills in Java programm
 
 There are 3 steps. You are free to change what you want and propose anything you like.
 
-This test is not about making it work but how you make it work.
+This test is not about making it work but HOW you make it work.
 
 Fork this repo and start hacking...
 
@@ -15,7 +15,7 @@ Fork this repo and start hacking...
 
 2.  **com.example.TimeMachine.isPast**
 
-    Implements this method to pass the test. You may need to modify the test code.
+    Implements this method to make the test pass. You may need to modify the test code.
 
 3.  **com.example.Decision#decide**
 
