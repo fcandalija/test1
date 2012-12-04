@@ -20,8 +20,11 @@ public class TimeMachine {
     public boolean isPast(
             final Date date)
     {
-        // TODO isPast
-        throw new UnsupportedOperationException();
+    	if(date==null){
+    		return false;
+    	}
+    	
+    	return date.getTime()<System.currentTimeMillis();
     }
     
 }

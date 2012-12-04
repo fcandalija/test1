@@ -1,69 +1,54 @@
 package com.example;
 
+
 /**
  *
  */
 public class Decision {
-    
-    public Decision(
-            final ChoiceSender choiceSender)
-    {
-        this.choiceSender = choiceSender;
-    }
-    
 
-    /**
-     * TODO refactor
-     */
-    public void decide(
-            final String input)
-    {
-        if (input == "choice1") {
-            final Choice choice = new Choice();
-            choice.setValue(input);
-            
-            System.out.println(choice.getValue() + " for roger");
-            this.choiceSender.send(choice);
-        }
-        else if (input == "choice2") {
-            final Choice choice = new Choice();
-            choice.setValue(input);
-            
-            System.out.println(choice.getValue() + " for robert");
-            this.choiceSender.send(choice);
-        }
-        else if (input == "choice3") {
-            final Choice choice = new Choice();
-            choice.setValue(input);
-            
-            System.out.println(choice.getValue() + " for patrick");
-            this.choiceSender.send(choice);
-        }
-        else if (input == "choice4") {
-            final Choice choice = new Choice();
-            choice.setValue(input);
-            
-            System.out.println(choice.getValue() + " for roger");
-            this.choiceSender.send(choice);
-        }
-        else if (input == "choice5") {
-            final Choice choice = new Choice();
-            choice.setValue(input);
-            
-            System.out.println(choice.getValue() + " for cléo");
-            this.choiceSender.send(choice);
-        }
-        else {
-            final Choice choice = new Choice();
-            choice.setValue(input);
-            
-            System.out.println(choice.getValue() + " for anyone");
-            this.choiceSender.send(choice);
-        }
-        
-    }
-    
+	public Decision(final ChoiceSender choiceSender) {
+		this.choiceSender = choiceSender;
+	}
 
-    private final ChoiceSender choiceSender;
-    
+	/**
+	 * TODO refactor
+	 */
+	public void decide(final String input) {
+		final Choice choice = new Choice(input);
+		logSentTo(input, choice);
+		this.choiceSender.send(choice);
+
+	}
+
+	/**
+	 * Do the logging part. 
+	 * It will print the  {@code choice} value and, given the {@code input}, whose the {@link Choice} is intended to.
+	 * @param input
+	 * @param choice
+	 */
+	private void logSentTo(final String input, final Choice choice) {
+		StringBuilder builder = new StringBuilder().append(choice.getValue()).append(" for ");
+		switch (input) {
+		case "choice1":
+		case "choice4":
+			builder.append("roger");
+			break;
+		case "choice2":
+			builder.append("robert");
+			break;
+		case "choice3":
+			builder.append("patrick");
+			break;
+		case "choice5":
+			builder.append("cléo");
+			break;
+		default:
+			builder.append("anyone");
+			break;
+		}
+		System.out.println(builder);
+	}
+
+	private final ChoiceSender choiceSender;
+
 }
