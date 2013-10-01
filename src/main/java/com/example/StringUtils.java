@@ -1,10 +1,5 @@
 package com.example;
 
-import java.util.Collections;
-import java.util.List;
-
-import com.google.common.base.Joiner;
-import com.google.common.collect.Lists;
 
 /**
  * Utility String methods.
@@ -26,13 +21,7 @@ public class StringUtils {
 	 *         empty.
 	 */
 	public static String joinAlphabeticalyReversed(final Iterable<String> parts, final String separator) {
-		String result = "";
-		// Not yet sorted
-		List<String> sortedParts = Lists.newArrayList(parts==null?Lists.<String>newArrayListWithExpectedSize(0):parts);
-		Collections.sort(sortedParts);
-		Collections.reverse(sortedParts);
-		result = Joiner.on(separator==null?"":separator).join(sortedParts);
-		return result;
+		return "";
 	}
 
 }

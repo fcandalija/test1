@@ -20,11 +20,7 @@ public class TimeMachine {
     public boolean isPast(
             final Date date)
     {
-    	if(date==null){
-    		return false;
-    	}
-    	
-    	return date.getTime()<System.currentTimeMillis();
+    	return false;
     }
     
 }
